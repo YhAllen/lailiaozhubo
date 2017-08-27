@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="zheshiyigedemo">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+	<title>来撩主播</title>
+	<link rel="stylesheet" type="text/css" href="./css/dropload.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link type="text/css" href="css/style2.css" rel="stylesheet"/>
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.event.drag.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+	<script src="./js/dropload.min.js"></script>
+	<script src="./js/hhSwipe.js"></script>
+	<script src="./js/demo1.js"></script>
+	<script>
+		 // 高度适配说明：通过设置一个方便计算的数值，来设置根元素的font-size,所有元素通过rem为单位达到适配需求；
+	    //具体使用：
+	    //通过视觉稿宽度除以一个数获得一个方便计算的值100；
+	    //所有元素的高度可用{(视觉稿量的的高度)/100}rem获得适配的高度；
+	    !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+"px"}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
+	</script>
+</head>
+<body>
+	<!--首页列表，热门部分 -->
+	<div class="wrap">
+		<!-- 头部内容 -->
+		<div class="top">
+			<!-- 轮播图部分 -->
+			<div class="img_gallery">
+   				<div class="point">
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				    <a href="#"></a>
+   				</div>
+   				<div class="main_img">
+   				    <ul>
+   				        <li><span class="img_1"></span></li>
+   				        <li><span class="img_2"></span></li>
+   				        <li><span class="img_3"></span></li>
+   				        <li><span class="img_4"></span></li>
+   				        <li><span class="img_5"></span></li>
+   				        <li><span class="img_6"></span></li>
+   				        <li><span class="img_7"></span></li>
+   				    </ul>
+   				</div>
+   				<a href="javascript:;" id="btn_prev"></a>
+   				<a href="javascript:;" id="btn_next"></a>
+			</div>
+			<!-- 标题 -->
+			<div class="top-title">
+				<div class="top-title-box"></div>
+				<div class="top-title-text">
+					热撩主播<a href="#content">查看全部<span>></span></a>
+				</div>
+			</div>
+			<!--热门，排行榜按钮-->
+			<div class="top-button">
+				<div class="top-button-btns">
+					<div class="top-button-btn">热门</div>
+					<div class="top-button-btn">排行榜</div>
+				</div>
+			</div>
+		</div>
+		<!--主体内容-->
+		<div class="content" id="content">
+		<!--内容，主播信息-->
+			<ul class="content-row">
+				<li>
+					<a class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person1!263x263.png">
+						<p>曾经的皇族领队，李黑龙，造就了YY上第一哥万人酱。</p>
+						<img class="content-row-hot" src="./images/content-hot!48x48.png">
+						<div class="content-row-name">
+							<span>YY主播：<span>李晨的冰冰</span></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a  class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person2!263x263.png">
+						<p>李黑龙，造就了YY上第一哥万人酱曾经的</p>
+						<div class="content-row-name">
+							<span>分贝主播：<span class="content-name">七哥乔峰</span></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a  class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person3!263x263.png">
+						<p>曾经的皇族领队，李黑龙，造就了YY上第一哥万人酱。</p>
+						<div class="content-row-name">
+							<span>YY主播：<span class="content-name">Chrisdina</span></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a  class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person4!263x263.png">
+						<p>李黑龙，造就了YY上第一哥万人酱曾经的</p>
+						<img class="content-row-hot" src="./images/content-hot!48x48.png">
+						<div class="content-row-name">
+							<span>分贝主播：<span class="content-name">这个人很懒</span></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person5!263x263.png">
+						<p>曾经的皇族领队，李黑龙，造就了YY上第一哥万人酱。</p>
+						<div class="content-row-name">
+							<span>YY主播：<span class="content-name">Chrisdina</span></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="content-href">
+						<h3>已撩：<span>582</span>次</h3>
+						<img class="content-row-bg" src="./images/content-person6!263x263.png">
+						<p>李黑龙，造就了YY上第一哥万人酱曾经的</p>
+						<div class="content-row-name">
+							<span>分贝主播：<span class="content-name">这个人很懒</span></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			<!-- 内容,排行榜 -->
+			<ul class="content-list">
+			<!-- 第一个排行榜内容 -->
+				<li>
+					<div class="content-bian"></div>
+					<div class="content-num">1</div>
+					<div class="content-header">
+						<img class="content-header1" src="images/content-first!33x25.png">
+						<div class="content-header2">
+							<img src="images/content-person2!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：这个人很懒</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			    <!-- 第二个排行榜内容 -->
+				<li>
+					<div class="content-bian"></div>
+					<div class="content-num">2</div>
+					<div class="content-header">
+						<img class="content-header1" src="images/content-second!33x25.png">
+						<div class="content-header2">
+							<img src="images/content-person3!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：这个人很懒</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			    <!--第三个排行榜内容-->
+				<li>
+					<div class="content-bian"></div>
+					<div class="content-num">3</div>
+					<div class="content-header">
+						<img class="content-header1" src="images/content-third!33x25.png">
+						<div class="content-header2">
+							<img src="images/content-person4!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：这个人不懒</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			      <!-- 第四个排行榜内容 -->
+				<li>
+					<div class="content-num">4</div>
+					<div class="content-header">
+						<div class="content-header2">
+							<img src="images/content-person5!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：这个人不是很懒</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			    <!-- 第五个排行榜内容 -->
+				<li>
+					<div class="content-num">5</div>
+					<div class="content-header">
+						<div class="content-header2">
+							<img src="images/content-person6!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：Miss</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			     <!-- 第六个排行榜内容 -->
+				<li>
+					<div class="content-num">6</div>
+					<div class="content-header">
+						<div class="content-header2">
+							<img src="images/content-person7!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">YY主播：这个人好色</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+
+			    <!-- 第七个排行榜内容 -->
+				<li>
+					<div class="content-num">7</div>
+					<div class="content-header">
+						<div class="content-header2">
+							<img src="images/content-person14!94x94.jpg">
+						</div>
+					</div>
+					<div class="content-mingzi">
+						<p class="content-mingzi-tile">Y平台：无非是个错</p>
+						<img src="images/content-rmb!35x35.png">
+						<p class="content-mingzi-num">513次</p>				
+					</div>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+
+		<!-- 底部内容 -->
+		<div class="bottom">
+			<!-- 加载更多 -->
+		 	<div class="bottom-load">
+		 		<img src="./images/content-vedio!43x43.png">
+		 		<span>加载更多...</span>
+		 	</div>
+		 	<div class="bottom-copyright">
+				<p>版权所有@七度传媒</p>
+				<p>Copy right @ Qidu .Inc</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(".img_gallery").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+    });
+     
+    $dragBln = false;
+     
+    $(".main_img").touchSlider({
+        flexible : true,
+        speed : 200,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".point a"),
+        counter : function (e){
+            $(".point a").removeClass("on").eq(e.current-1).addClass("on");//图片顺序点切换
+            $(".img_font span").hide().eq(e.current-1).show();//图片文字切换
+        }
+    });
+     
+    $(".main_img").bind("mousedown", function() {
+        $dragBln = false;
+    });
+     
+    $(".main_img").bind("dragstart", function() {
+        $dragBln = true;
+    });
+     
+    $(".main_img a").click(function(){
+        if($dragBln) {
+            return false;
+        }
+    });
+     
+    timer = setInterval(function(){
+        $("#btn_next").click();
+    },2000);
+     
+    $(".img_gallery").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        },2000);
+    });
+     
+    $(".main_img").bind("touchstart",function(){
+        clearInterval(timer);
+    }).bind("touchend", function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 2000);
+    });
+//=============隔页传值=================
+$(".content-href").each(function(){
+	$(this).click(function(){
+		// alert($(this).children().eq($("this").children().length-1).children().eq(0).children().eq(0).html());
+		window.location = "third.html#" +$(this).children().eq(0).children().eq(0).html()+"*"+$(this).children().eq(1).attr("src")+"^"+$(this).children().eq($("this").children().length-1).children().eq(0).children().eq(0).html();
+	});
+});
+</script>
+</html>

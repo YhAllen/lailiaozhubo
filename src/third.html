@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html charset=utf-8" http-equiv="content-type">
+  <meta name="description" content="zheshiyigedemo">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+  <meta name="format-detection" content="telephone=no">
+  <title>来撩主播</title>
+  <link rel="stylesheet" type="text/css" href="./css/style_dashang.css">
+  <script src="./js/jquery-3.1.0.min.js"></script>
+  <script>
+   // 高度适配说明：通过设置一个方便计算的数值，来设置根元素的font-size,所有元素通过rem为单位达到适配需求；
+    //具体使用：
+    //通过视觉稿宽度除以一个数获得一个方便计算的值100；
+    //所有元素的高度可用{(视觉稿量的的高度)/100}rem获得适配的高度；
+    !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+"px"}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
+ </script>
+</head>
+<body>
+  <div class="wrap">
+	  <div class="top">
+		  <img src="images/top-headImg!130x130.png" class="top-img">
+			<p>
+				<span class="anchor_name">YY主播</span>
+        <span>:</span>
+				<span class="top-name">Chrisdian</span>
+			</p>
+			<p class="top-text">
+  			<img src="images/top-vedio!38x42.png">
+  			<span class="anchor_number">被撩</span>
+        <span>:</span>
+  			<span class="top-count">531次</span>
+			</p>
+	  </div>
+	  <div class="top-border"></div>
+ 	  <div class="content_first">
+ 			<p>
+ 			  <span class="content_firstwords1">微信号</span>
+ 				<span class="content_firstnumber">13718478369</span>
+ 				<img src="images/content-rmb!35x35.png">
+ 				<span class="content_firstwords2" onclick="getnumber()">打赏看</span>
+ 			</p>
+ 	  </div>
+    <!-- 主播个人信息部分 -->
+ 	  <div class="content_second">
+ 		  <p class="test">个人信息</p>
+ 			<div class="content_second-border1"></div>
+    		<ul class="content_secondlist">
+    			<li id="content_secondlist1">
+  					<span>姓名 :&nbsp;<span>
+  					<span class="content-name">Chrisdina</span>
+  				</li>
+	   			<div class="content_second-border2">
+		   		</div>
+					<li id="content_secondlist2">
+						<span>年龄 :&nbsp;21岁</span>
+						<span style="float:right;margin-right:0.4rem;">性别 : &nbsp;女</span>
+					</li>
+	   			<div class="content_second-border2"></div>
+					<li id="content_secondlist3">
+						<span>婚姻状况 : &nbsp;单身狗</span>
+					</li>
+					<div class="content_second-border2"></div>
+					<li id="content_secondlist4">
+						<span>平台 : &nbsp;印象直播</span>
+						<span style="float:right;margin-right:0.4rem;">粉丝 : &nbsp;5540万</span>
+					</li>
+					<div class="content_second-border2">
+  				</div>
+    	  </ul>
+ 	  </div>
+    <!-- 页面第三板块主播风采 -->
+ 	  <div class="content_third">
+  	  <p class="content_third_firstp">主播风采</p>
+  		<div class="content_second-border3"></div>
+   		<div class="content_third_vedio">
+         <iframe frameborder="0" width="100%" height="100%" src="http://v.qq.com/iframe/player.html?vid=j0322gtdjxa&tiny=0&auto=0" allowfullscreen controls="controls">
+        </iframe>
+   		</div>
+      <div class="content_third-border4"></div>
+   		<p class="personmessage">韩懿游戏1988年5月21日出生于四川内江毕业于海南大学魔兽争霸3职业女选手星际争霸2职业女选手解说2007年5月加入中国第一女子战队2008年7月在2008三2008年7月，在wcg2008三星电子杯广州赛区的wcg girl 魔兽女子赛中出线。2009年8月荣获中国WCG魔兽女子组季军。2010年6在 iP.Girls Open Cup国际女子线上公开赛 中荣获冠军。
+   		</p>
+   		<img class="content_third_picture" src="images/content-article!523x350.png"> 
+      <p class="introduction">主播不同于现在的主持人主持人只是单纯的做主持工作将一段一段的节目串联起来而主播要做的工作更多策划编辑采访制作导播主持等一系列工作大都是由主播负责不是全部但也会参与主播是一个很全面的工作包括主持人。
+      </p>
+  	</div>
+    <div class="clear"></div>
+		<!-- 底部内容 -->
+		<div class="bottom">
+      <!-- 加载更多 -->
+      <div class="bottom-load">
+        <img src="./images/content-vedio!43x43.png">
+        <span>加载更多...</span>
+      </div>
+      <div class="bottom-copyright">
+        <p>版权所有@七度传媒</p>
+        <p>Copy right @ Qidu .Inc</p>
+      </div>
+    </div>
+	</div>
+</body>
+<script type="text/javascript">
+ function getnumber(){
+  $.ajax({
+      url: "./json/data3.json",
+      type: "get",
+      dataType:"json",
+      async: "false",
+      cache: "false",
+      data: {},
+      success:function(data){
+        $(".content_firstnumber").html(data.data.num);
+        $(".content_firstnumber").css({"-webkit-filter":"blur(0)"});
+      },
+      error: function(){
+        alert("数据错误");
+      }
+  })
+}
+//==============接收传过来的值================
+var sum = location.hash; //获取网页地址后面从#号开始的值。这个值从上一个网页传过来的,过滤掉#号。
+var leng = sum.indexOf("*");//找到*在字符串中的位置。
+var leng2 = sum.indexOf("^");//找到%在字符串中的位置。
+// console.log(leng);
+// console.log(leng2);
+$(".top-count").html(sum.substring(1,leng)); //将获取到的值传入这个网页。substing截取开始位置到结束位置-1的字符串。
+$(".top-img").attr("src",sum.substring(leng+1,leng2));
+$(".top-name").html(sum.substring(leng2+1));
+$(".content-name").html(sum.substring(leng2+1));
+</script>
+</html>
